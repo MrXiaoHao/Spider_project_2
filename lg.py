@@ -29,8 +29,7 @@ def get_page_url(page):
     time.sleep(3)
 
 def parse_page_html(content):
-    parttern =re.compile('.*?"companyShortName":"(.*?)".*?"education":(.*?)".*?"workYear":"(.*?)".*?"salary":"(.*?)".*?"positionName":"(.*?)".*?"linestaion":"(.*?)"'
-                         ,re.S)
+    parttern =re.compile('.*?"companyShortName":"(.*?)".*?"education":(.*?)".*?"workYear":"(.*?)".*?"salary":"(.*?)".*?"positionName":"(.*?)".*?"linestaion":"(.*?)"',re.S)
     companies = re.findall(parttern,content)
     return companies
 def save_to_data(data):
