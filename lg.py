@@ -43,7 +43,7 @@ def main():
         content = get_page_url(page)
         datas = parse_page_html(content)
         for data in datas:
-            print(data)
             save_to_data(data)
+            print("存储数据成功")
 if __name__ == "__main__":
     main()
